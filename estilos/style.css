@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+/* ## Layout
+
+    The designs were created to the following widths:
+
+    - Mobile: 375px
+    - Desktop: 1440px 
+*/
+
+:root {
+    /* ### Primary */
+    --very-dark-blue: hsl(233, 47%, 7%); /* (main background) */
+    --dark-desaturated-blue: hsl(244, 38%, 16%); /* (card background) */
+    --soft-violet: hsl(277, 64%, 61%); /* (accent) */
+
+    /* ### Neutral */
+    --white: hsl(0, 0%, 100%); /* (main heading, stats) */
+    --slightly-transparent-white: hsla(0, 0%, 100%, 0.75); /* (main paragraph) */
+    --slightly-transparent-white: hsla(0, 0%, 100%, 0.6); /* (stat headings) */
+
+    /* ### Fonts */
+    --font1: 'Inter', sans-serif;
+    --font2: 'Lexend Deca', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+
+
+
+
+/* Footer */
+.attribution { 
+    font-size: 11px; text-align: center;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
