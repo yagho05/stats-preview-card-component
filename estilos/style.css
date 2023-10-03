@@ -136,7 +136,7 @@ p {
         height: 100%;
         order: 2;
     }
-
+    
     .texto {
         display: flex;
         max-width: 606px;
