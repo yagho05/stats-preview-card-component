@@ -18,8 +18,8 @@
 
     /* ### Neutral */
     --white: hsl(0, 0%, 100%); /* (main heading, stats) */
-    --slightly-transparent-white: hsla(0, 0%, 100%, 0.75); /* (main paragraph) */
-    --slightly-transparent-white: hsla(0, 0%, 100%, 0.6); /* (stat headings) */
+    --slightly-transparent-white1: hsla(0, 0%, 100%, 0.75); /* (main paragraph) */
+    --slightly-transparent-white2: hsla(0, 0%, 100%, 0.6); /* (stat headings) */
 
     /* ### Fonts */
     --font1: 'Inter', sans-serif;
@@ -32,14 +32,86 @@
     font-size: 15px;
 }
 
+body {
+    height: 97vh;
+    width: 100vw;
+    background-color: var(--very-dark-blue);
+}
 
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 25px auto;
+    margin-bottom: 45px;
+    height: 90vh;
+    width: 375px;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid black;
+    background-color: var(--dark-desaturated-blue);
+    border-radius: 10px;
+}
 
+.container > * {
+    flex: 1 1 auto;
+}
+
+.img {
+    background-color: var(--soft-violet);
+    height: 30%;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+img {
+    opacity: 50%;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+h1 {
+    font-family: var(--font1);
+    color: var(--white);
+    font-size: 30px;
+    text-align: center;
+    margin: 40px 35px 20px;
+}
+
+strong {
+    color: var(--soft-violet);
+    font-size: 30px;
+}
+
+p {
+    font-family: var(--font2);
+    color: var(--slightly-transparent-white1);
+    text-align: center;
+    margin: 0 50px 30px;
+}
+
+.numeros {
+    font-family: var(--font1);
+    font-size: 30px;
+    color: var(--slightly-transparent-white2);
+}
+
+.tipos {
+    font-size: 0.8em;
+}
 
 /* Footer */
 .attribution { 
-    font-size: 11px; text-align: center;
+    font-size: 1em; text-align: center;
+    color: var(--white);
 }
 
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: var(--soft-violet);
+    text-decoration: none;
+}
+
+.attribution a:hover { 
+    color: var(--slightly-transparent-white2);
+    text-decoration: underline;
 }
