@@ -78,6 +78,10 @@ h1 {
     margin: 40px 35px 20px;
 }
 
+h2 {
+    text-align: center;
+}
+
 strong {
     color: var(--soft-violet);
     font-size: 30px;
@@ -114,4 +118,39 @@ p {
 .attribution a:hover { 
     color: var(--slightly-transparent-white2);
     text-decoration: underline;
+}
+
+@media screen and (min-width: 1600px) {
+    .container {
+        width: 90vw;
+        max-width: 1440px;
+        flex-direction: row;
+        align-items: center;
+        justify-items: center;
+    }
+    
+    .img {
+        display: flex;
+        align-items: stretch;
+        justify-content: stretch;
+        height: 100%;
+        order: 2;
+    }
+
+    .texto {
+        display: flex;
+        max-width: 606px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .texto h1, .texto strong {
+        font-size: 45px;
+    }
+
+    .texto p {
+        font-size: 20px;
+    }
 }
