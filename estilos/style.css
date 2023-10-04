@@ -29,12 +29,17 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-size: 15px;
 }
 
 body {
     height: 97vh;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: var(--very-dark-blue);
 }
 
@@ -42,12 +47,10 @@ body {
     display: flex;
     flex-direction: column;
     margin: 25px auto;
-    margin-bottom: 45px;
-    height: 90vh;
+    height: 100%;
     width: 375px;
     align-items: center;
     justify-content: flex-start;
-    border: 1px solid black;
     background-color: var(--dark-desaturated-blue);
     border-radius: 10px;
 }
@@ -56,22 +59,23 @@ body {
     flex: 1 1 auto;
 }
 
-.img {
-    background-color: var(--soft-violet);
+.img-container {
+    background-color: hsl(277, 75%, 35%);
     height: 30%;
     width: 100%;
     border-radius: 10px 10px 0 0;
 }
 
-img {
-    opacity: 50%;
+.img {
+    background: url(../images/image-header-mobile.jpg) no-repeat;
+    background-size: cover;
+    opacity: 40%;
     height: 100%;
-    width: 100%;
     border-radius: 10px 10px 0 0;
 }
 
 h1 {
-    font-family: var(--font1);
+    font-family: var(--font2);
     color: var(--white);
     font-size: 30px;
     text-align: center;
@@ -79,25 +83,29 @@ h1 {
 }
 
 h2 {
+    font-family: var(--font2);
     text-align: center;
 }
 
 strong {
+    font-family: var(--font2);
     color: var(--soft-violet);
     font-size: 30px;
 }
 
 p {
-    font-family: var(--font2);
-    color: var(--slightly-transparent-white1);
+    font-family: var(--font1);
+    color: var(--slightly-transparent-white2);
     text-align: center;
+    font-weight: 200;
+    line-height: 25px;
     margin: 0 50px 30px;
 }
 
 .numeros {
     font-family: var(--font1);
     font-size: 30px;
-    color: var(--slightly-transparent-white2);
+    color: var(--white);
 }
 
 .tipos {
@@ -120,21 +128,23 @@ p {
     text-decoration: underline;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
     .container {
-        width: 90vw;
-        max-width: 1440px;
+        width: 1100px;
+        height: 580px;
         flex-direction: row;
         align-items: center;
         justify-items: center;
     }
     
-    .img {
-        display: flex;
-        align-items: stretch;
-        justify-content: stretch;
+    .img-container {
         height: 100%;
         order: 2;
+        border-radius: 0 10px 10px 0;
+    }
+
+    .img {
+        border-radius: 0 10px 10px 0;
     }
     
     .texto {
@@ -152,5 +162,5 @@ p {
 
     .texto p {
         font-size: 20px;
-    }
+    }    
 }
